@@ -1,0 +1,30 @@
+<div ng-controller="RepositorioDoUsuarioCtrl">
+    <h2>Todos repositórios de {{login}}</h2>
+    <a href="#/user/{{login}}">Voltar</a>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Url</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in repositorios">
+                        <td>
+                            {{item.id}}
+                        </td>
+                        <td>
+                            {{item.name}}
+                        </td>
+                        <td>
+                            {{item.url}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
